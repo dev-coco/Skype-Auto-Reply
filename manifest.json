@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "叮",
+  "description": "Skype 自动回复",
+  "author": "Raz1ner",
+  "version": "1.0.1",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "background" : {
+    "scripts": ["js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.skype.com/*"
+      ],
+      "js": ["js/load.js"]
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["https://web.skype.com/*"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "https://web.skype.com/*",
+    "activeTab",
+    "storage"
+  ]
+}
