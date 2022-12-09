@@ -60,7 +60,7 @@ async function scanPage () {
     // 获取信息
     const getDetail = x.ariaLabel
     // 判断发消息的个人用户，并且最后一条不是自动回复
-    if (getDetail.includes('条新消息') && !getDetail.includes('多人会话')) {
+    if (getDetail.includes('条新消息') && !getDetail.includes('多人会话') && !getDetail.includes('「自动回复」')) {
       // 点击进入页面
       x.querySelectorAll('div[role="none"]')[6].click()
       await delay(1)
@@ -70,7 +70,7 @@ async function scanPage () {
       // 获取ID
       const userID = document.querySelector('button[role="button"][aria-label^="Skype 用户名"]').ariaLabel.split(', ')[1]
       // 发送消息
-      send(['sendText', '8:' + userID])
+      await send(['sendText', '8:' + userID])
       index++
     } // End if
   } // Endi for of
