@@ -3,7 +3,7 @@
   "name": "叮",
   "description": "Skype 自动回复",
   "author": "Raz1ner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "browser_action": {
     "default_icon": "icon.png"
   },
@@ -29,7 +29,10 @@
     "open_in_tab": true
   },
   "permissions": [
+    "webRequest",
+    "webRequestBlocking",
     "https://web.skype.com/*",
+    "https://*.gateway.messenger.live.com/*",
     "activeTab",
     "storage"
   ]
