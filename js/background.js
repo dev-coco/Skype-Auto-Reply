@@ -25,6 +25,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 // 后台监听器
 chrome.runtime.onMessageExternal.addListener((msg, sender, response) => {
+  console.log(msg)
   // 获取存在内存的数据
   chrome.storage.local.get(['getVolumeValue', 'getContent', 'getSkypeToken', 'getUrl'], ({ getVolumeValue, getContent, getSkypeToken, getUrl }) => {
     if (msg[0] === 'ding') {
