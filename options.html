@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>叮</title>
+  <title>Skype 自动回复</title>
   <meta charset="utf-8">
   <style>
     body {
@@ -23,7 +23,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
     div.form-item {
       margin-bottom: 20px;
@@ -33,7 +33,7 @@
     select.form-style,
     textarea.form-style {
       color: #8a8a8a;
-      width: 80%;
+      width: 260px;
       height: 24px;
       padding: 5px 20px;
       border: 1px solid #ccc;
@@ -59,14 +59,13 @@
       color: #58bff6;
     }
     button {
-      width: 112px;
+      width: 300px;
       height: 37px;
       border-radius: 10px;
       background-color: #55b1df;
       border: none;
       color: #fff;
       margin-bottom: 15px;
-      float: right;
     }
     button:hover {
       background-color: #fff;
@@ -74,9 +73,9 @@
       color: #55b1df;
       cursor: pointer;
     }
-    .footer {
-      padding-left: 15px;
-      padding-right: 15px;
+    #status {
+      text-align: center;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -90,6 +89,16 @@
     </div>
     <div class="form-item">
       <textarea class="form-style" id="content" placeholder="需要回复的内容">「自动回复」</textarea>
+    </div>
+    <div class="form-item">
+      <hr>
+    </div>
+    <div class="form-item">
+      <input class="form-style" id="sheetUrl" value="" placeholder="表格链接">
+    </div>
+    <div class="form-item">
+      <button id="sendMessage">批量发送</button>
+      <p id="status"></p>
     </div>
   </div>
   <script src="js/popup.js"></script>

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "叮",
-  "description": "Skype 自动回复",
+  "name": "Skype 自动回复",
+  "description": "Skype 自动回复，群发",
   "author": "Raz1ner",
   "version": "1.0.3",
   "browser_action": {
