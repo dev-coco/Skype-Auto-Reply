@@ -65,3 +65,5 @@ function sendText (userID, content, getSkypeToken, getUrl) {
     method: 'POST',
   }).then(json=>json.json())
 }
+
+

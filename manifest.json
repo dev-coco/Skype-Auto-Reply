@@ -3,7 +3,7 @@
   "name": "Skype 自动回复",
   "description": "Skype 自动回复，群发",
   "author": "Raz1ner",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "browser_action": {
     "default_icon": "icon.png"
   },
